@@ -1,0 +1,16 @@
+.main{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 40px;
+}
+.cart-container{
+    background-color: #FFE0B3;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
