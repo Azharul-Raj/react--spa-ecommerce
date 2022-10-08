@@ -6,7 +6,7 @@ import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
-    const products=useLoaderData()
+    const {products}=useLoaderData()
     // cart setting function here
     const [cart,setCart]=useState([])
 

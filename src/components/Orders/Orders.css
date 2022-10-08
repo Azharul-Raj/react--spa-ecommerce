@@ -1,0 +1,11 @@
+.order-summery{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 0 10%;
+}
+
+
+.cart-details{
+    background-color: orange;
+    text-align: center;
+}
