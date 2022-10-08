@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { addToStorage, getFromStore } from '../AddToStore/AddToStore';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
-    const [products,setProducts]=useState([])
+    const products=useLoaderData()
     // cart setting function here
     const [cart,setCart]=useState([])
 
-    useEffect(()=>{
-        fetch('products.json')
-        .then(res=>res.json())
-        .then(data=>setProducts(data))
-    },[])
     // load data from localStorage
     useEffect(()=>{
         const storedData=getFromStore()
@@ -21,7 +17,6 @@ const Products = () => {
         let storedCart=[]
         for(const id in storedData){
             const storedProduct=products.find(product=>product.id===id)
-            console.log(storedProduct);
             if(storedProduct){
                 const quantity=storedData[id]
                 storedProduct.quantity=quantity

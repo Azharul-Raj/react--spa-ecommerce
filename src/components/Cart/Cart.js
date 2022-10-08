@@ -21,10 +21,10 @@ const Cart = ({cart}) => {
         <div className='cart'>
             <h2>Order Summary</h2>
             <p>Selected Item : {quantity} </p>
-            <p>Total Price : {totalPrice} </p>
-            <p>Total Shipping : {totalShipping} </p>
-            <p>Tax : {tax} </p>
-            <h4>Grand Total : {grandTotal} </h4>
+            <p>Total Price : {totalPrice}$</p>
+            <p>Total Shipping : {totalShipping}$</p>
+            <p>Tax : {tax}$</p>
+            <h4>Grand Total : {grandTotal}$</h4>
         </div>
     );
 };
