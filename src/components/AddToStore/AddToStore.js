@@ -23,4 +23,12 @@ const getFromStore=()=>{
     return items
 }
 
-export {addToStorage,getFromStore}
+const removeFromStore = (id) => {
+    const storedItem = JSON.parse (localStorage.getItem('cart'))
+    if(id in storedItem) {
+        delete storedItem[id]
+        localStorage.setItem('cart',JSON.stringify(storedItem))
+    }
+}
+
+export {addToStorage,getFromStore,removeFromStore}

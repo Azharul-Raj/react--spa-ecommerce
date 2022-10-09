@@ -6,7 +6,7 @@ import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
-    const {products}=useLoaderData()
+    const {products,newStoredCart}=useLoaderData()
     // cart setting function here
     const [cart,setCart]=useState([])
 
@@ -28,6 +28,7 @@ const Products = () => {
         }
     },[products])
 
+    // setCart(newStoredCart)
     const handleCart=(id,selectedProduct)=>{
         let newCart;
         // console.log(selectedProduct);
@@ -46,6 +47,7 @@ const Products = () => {
         // console.log(rest)
         addToStorage(id)
     }
+    
     // console.log(cart);
     return (
         <div className='main'>
